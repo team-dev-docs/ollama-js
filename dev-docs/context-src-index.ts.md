@@ -16,14 +16,24 @@ The file also exports all types from the interfaces file and creates a default i
 ---
 # Ollama src/index.ts
 ## Imported Code Object
-In this code snippet, Ollama appears to be a class that extends OllamaBrowser. It provides additional functionality for working with Ollama, which is likely an AI model or framework. Here's a concise explanation of what Ollama does in this code:
+In this code snippet, Ollama is a class that extends OllamaBrowser. It appears to be part of a larger system for handling and processing machine learning models. Here's a concise explanation of what Ollama does based on the provided code:
 
-1. It provides methods for encoding images to base64 format.
-2. It can parse and modify modelfiles, replacing certain commands with blob hashes.
-3. It handles file path resolution and checks for file existence.
-4. It creates blobs from files, computing SHA256 digests and uploading them if necessary.
-5. It overrides the `create` method from the parent class, adding functionality to handle modelfile content from either a file path or direct input.
+1. Image Encoding: It can encode images into base64 format, handling various input types (Uint8Array, Buffer, or file paths).
 
-Overall, this class seems to be a wrapper or extension that adds convenience methods and file handling capabilities to the base OllamaBrowser implementation, specifically for working with models and their associated files in the Ollama ecosystem.
+2. Modelfile Parsing: It parses modelfiles, replacing certain commands (FROM and ADAPTER) with corresponding blob hashes.
+
+3. Path Resolution: It resolves file paths, handling both relative and absolute paths.
+
+4. File Operations: It checks for file existence and creates blobs from files, including support for streaming uploads.
+
+5. Model Creation: It provides methods for creating models, either from a file path or direct modelfile content.
+
+Overall, Ollama seems to be a utility class that extends OllamaBrowser with additional functionality for handling image encoding, modelfile processing, and model creation in a machine learning context.
+
+# OllamaDrama src/index.ts
+## Imported Code Object
+Based on the provided code snippet, here's a concise explanation of OllamaDrama:
+
+OllamaDrama is a class that extends another class called OllamaBrowserThing. It has a single asynchronous method named coolYeah that takes an image parameter. However, the method doesn't use the image parameter and simply returns the string "hello". The class appears to be a placeholder or a simplified implementation, possibly for testing or demonstration purposes, as it doesn't provide any significant functionality beyond returning a fixed string.
 
   

@@ -9,6 +9,12 @@ import { Ollama as OllamaBrowser } from './browser.js'
 
 import type { CreateRequest, ProgressResponse } from './interfaces.js'
 
+export class OllamaDrama extends OllamaBrowserThing {
+  async coolYeah(image) {
+    return "hello"
+  }
+}
+
 export class Ollama extends OllamaBrowser {
   async encodeImage(image: Uint8Array | Buffer | string): Promise<string> {
     if (typeof image !== 'string') {

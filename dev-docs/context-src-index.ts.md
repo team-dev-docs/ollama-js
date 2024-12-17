@@ -3,27 +3,27 @@
   ---
 # High Level Context
 ## context
-This file (src/index.ts) is the main entry point for an Ollama client library, likely for interacting with an AI language model. It extends a browser-based Ollama class and adds additional functionality for working with local files and modelfiles. Key features include:
+This file (src/index.ts) defines the main Ollama class, which extends OllamaBrowser and implements additional functionality for interacting with the Ollama API. Key features include:
 
-1. Image encoding for handling different image input types
-2. Modelfile parsing and processing, including replacing FROM and ADAPTER commands with blob hashes
-3. File path resolution and existence checking
-4. Blob creation and management for file uploads
-5. Model creation functionality with support for both streaming and non-streaming responses
+1. Image encoding for processing image inputs
+2. Modelfile parsing and manipulation
+3. File handling and path resolution
+4. Blob creation and management for model files
+5. Model creation with support for both streaming and non-streaming responses
 
-The class provides methods for working with local files, creating blobs, and interacting with an API endpoint. It also handles different environments (browser vs. Node.js) and provides type exports for easier usage in other parts of the application.
+The file also exports all types from the interfaces file and creates a default instance of the Ollama class. This serves as the main entry point for the Ollama TypeScript SDK, providing a comprehensive set of tools for working with language models and the Ollama API.
 
 ---
 # Ollama src/index.ts
 ## Imported Code Object
-In this code snippet, Ollama is a class that extends OllamaBrowser. It appears to be a wrapper or extension of the OllamaBrowser class, providing additional functionality for working with AI models and files. Here's a concise explanation of what Ollama does:
+In this code snippet, Ollama appears to be a class that extends OllamaBrowser. It provides additional functionality for working with Ollama, which is likely an AI model or framework. Here's a concise explanation of what Ollama does in this code:
 
-1. It handles image encoding, converting images to base64 format.
-2. It parses and modifies modelfiles, replacing certain commands with blob hashes.
-3. It resolves file paths and checks for file existence.
+1. It provides methods for encoding images to base64 format.
+2. It can parse and modify modelfiles, replacing certain commands with blob hashes.
+3. It handles file path resolution and checks for file existence.
 4. It creates blobs from files, computing SHA256 digests and uploading them if necessary.
-5. It provides a method to create models, either from a file path or modelfile content.
+5. It overrides the `create` method from the parent class, adding functionality to handle modelfile content from either a file path or direct input.
 
-Overall, Ollama seems to be a utility class for managing AI models, handling file operations, and interacting with a model-related API.
+Overall, this class seems to be a wrapper or extension that adds convenience methods and file handling capabilities to the base OllamaBrowser implementation, specifically for working with models and their associated files in the Ollama ecosystem.
 
   

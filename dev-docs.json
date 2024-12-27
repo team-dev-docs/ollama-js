@@ -2,5 +2,6 @@
   "gitHubApp": {
       "workflows": ["generateDocs"]
   },
-"integrations": ["google_drive"]
+"integrations": ["google_drive"],
+"customRoot": ""
 }
